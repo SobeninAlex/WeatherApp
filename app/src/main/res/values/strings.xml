@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="hello_blank_fragment">WeatherApp</string>
+    <string name="current_temp">%s°C</string>
+    <string name="temp_min_max">%s°C / %s°C</string>
+    <string-array name="fragments_name">
+        <item>Hours</item>
+        <item>Days</item>
+    </string-array>
+</resources>
