@@ -28,12 +28,13 @@
             android:id="@+id/condition"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:ellipsize="end"
             android:fontFamily="@font/allerta_stencil"
             android:lines="1"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/barrier"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/date"
             tools:text="Sunny Sunny Sunny" />
@@ -48,16 +49,17 @@
 
         <TextView
             android:id="@+id/temp"
-            android:layout_width="0dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/allerta_stencil"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="-27.5°C / 27.5°C" />
+            tools:text="-27°C / 27°C" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier"

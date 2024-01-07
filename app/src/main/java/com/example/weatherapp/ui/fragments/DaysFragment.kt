@@ -36,7 +36,7 @@ class DaysFragment : Fragment() {
         viewMode.weatherInfo.observe(viewLifecycleOwner) { response ->
             response.data?.let {
                 it.forecast.forecastday.also { list ->
-                    daysAdapter.submitList(list)
+                    daysAdapter.submitList(list.subList(1, list.size))
                 }
             }
         }

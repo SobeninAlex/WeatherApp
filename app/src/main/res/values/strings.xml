@@ -3,6 +3,14 @@
     <string name="hello_blank_fragment">WeatherApp</string>
     <string name="current_temp">%s°C</string>
     <string name="temp_min_max">%s°C / %s°C</string>
+    <string name="enabled_location">Enabled Location?</string>
+    <string name="location_disabled">Location disabled, do you wnt enable location?</string>
+    <string name="city_name">City name:</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="search">Search</string>
+    <string name="city">Enter city name</string>
+    <string name="field_cannot_be_empty">Field cannot be empty</string>
     <string-array name="fragments_name">
         <item>Hours</item>
         <item>Days</item>

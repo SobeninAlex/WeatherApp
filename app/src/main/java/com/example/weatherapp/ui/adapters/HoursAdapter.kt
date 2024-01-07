@@ -11,8 +11,7 @@ import com.example.weatherapp.databinding.ListItemBinding
 import com.example.weatherapp.models.Hour
 import com.squareup.picasso.Picasso
 
-class HoursAdapter(private val context: Context) :
-    ListAdapter<Hour, HoursAdapter.HoursViewHolder>(DiffCallback) {
+class HoursAdapter(private val context: Context) : ListAdapter<Hour, HoursAdapter.HoursViewHolder>(DiffCallback) {
 
     inner class HoursViewHolder(private val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Hour) = with(binding) {

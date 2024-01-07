@@ -11,23 +11,24 @@ import com.example.weatherapp.databinding.ListItemBinding
 import com.example.weatherapp.models.ForecastDay
 import com.squareup.picasso.Picasso
 
-class DaysAdapter(private val context: Context) :
-    ListAdapter<ForecastDay, DaysAdapter.DaysViewHolder>(DiffCallback) {
+class DaysAdapter(
+    private val context: Context
+) : ListAdapter<ForecastDay, DaysAdapter.DaysViewHolder>(DiffCallback) {
 
     inner class DaysViewHolder(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: ForecastDay) = with(binding) {
             date.text = item.date
             condition.text = item.day.condition.text
-            val minTemp = item.day.minTemp.toString()
-            val maxTemp = item.day.maxTemp.toString()
+            val minTemp = item.day.minTemp.toInt().toString()
+            val maxTemp = item.day.maxTemp.toInt().toString()
             temp.text = context.getString(R.string.temp_min_max, minTemp, maxTemp)
             temp.textSize = 20f
             Picasso.get().load("https:" + item.day.condition.icon).into(imageView)
         }
     }
 
-    companion object DiffCallback: DiffUtil.ItemCallback<ForecastDay>() {
+    companion object DiffCallback : DiffUtil.ItemCallback<ForecastDay>() {
         override fun areItemsTheSame(oldItem: ForecastDay, newItem: ForecastDay): Boolean {
             return oldItem == newItem
         }
